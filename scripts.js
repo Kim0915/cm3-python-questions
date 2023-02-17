@@ -3,11 +3,9 @@ fetch(url, {method: 'GET', headers: {accept: 'application/json'}})
 
 .then((response) => response.json())
 .then(function(questions) {
-    console.log("Fetched!");
     let placeholder = document.querySelector("#question-data");
     let out = "";
     for(let question of questions){
-        console.log(question.Question)
         out += `
         <tr>
             <td>${question["Topic"]}</td>
